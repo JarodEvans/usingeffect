@@ -1,5 +1,5 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
+
 const Namer = () => {
     const [name, setName] = useState("default name");
     const [useCount, setUseCount] = useState(0);
