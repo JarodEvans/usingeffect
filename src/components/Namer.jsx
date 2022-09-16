@@ -2,16 +2,16 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 const Namer = () => {
     const [name, setName] = useState("default name");
-    const names = ["Excalibur", "Renauld", "Gerard", "Lancelot", "Arthur"];
-
-    function changeName(counter){
-        return(
-            setName(names[counter])
-        );
-    }
-
     const [useCount, setUseCount] = useState(0);
+
     useEffect(() => {
+        const names = ["Excalibur", "Renauld", "Gerard", "Lancelot", "Arthur"];
+        function changeName(counter){
+            return(
+                setName(names[counter])
+            );
+        }
+
         if(useCount>names.length-1){
             setUseCount(0);
         }
